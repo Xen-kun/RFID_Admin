@@ -49,4 +49,5 @@ Route::post('/delete-name',[RoomController::class, 'deleteName']);
 //     return view('layouts/rooms');
 // });
 
+Route::get('/{vue?}', [HomeController::class, 'vueindex'])->where('vue', '[\/\w\.-]*');
 

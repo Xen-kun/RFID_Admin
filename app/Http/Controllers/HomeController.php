@@ -28,4 +28,8 @@ class HomeController extends Controller
         $colleges = collegeModel::all();
         return view('home', compact('colleges'));
     }
+
+    public function vueindex(){
+        return view("app");
+    }
 }
