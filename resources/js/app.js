@@ -2,7 +2,7 @@ import './bootstrap';
 import '../css/app.css';
 import { createApp, markRaw } from 'vue/dist/vue.esm-bundler.js';
 import { createRouter, createWebHistory, useRoute } from 'vue-router'
-import { routes } from './routes';
+import { routes } from './Routes/routes.js';
 
 import { createPinia } from 'pinia';
 

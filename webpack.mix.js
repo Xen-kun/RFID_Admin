@@ -11,9 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .vue({
-        version: 3,
-    })
+ mix.js('resources/js/app.js', 'public/js')
+    .vue()
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .webpackConfig({
+       resolve: {
+          extensions: [".*", ".js", ".jsx", ".vue", ".json"]
+       }
+    });
+ 
+ if (mix.inProduction()) {
+    mix.version();
+ }
+ 
