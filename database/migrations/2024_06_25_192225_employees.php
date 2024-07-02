@@ -15,14 +15,14 @@ class Employees extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id'); // Employee ID (unsigned)
-            $table->text('rfid')->nullable(); // RFID
-            $table->string('surname', 30); // Surname
-            $table->string('firstname', 30); // Firstname
-            $table->string('middlename', 30); // Middlename
-            $table->string('ext', 5)->nullable(); // Ext
-            $table->string('idnumber', 10); // ID Number
-            $table->timestamps(); // Adds created_at and updated_at columns
+            $table->unsignedInteger('id');
+            $table->text('rfid')->nullable();
+            $table->string('surname', 30);
+            $table->string('firstname', 30);
+            $table->string('middlename', 30);
+            $table->string('ext', 5)->nullable();
+            $table->string('idnumber', 10);
+            $table->timestamps();
         });
     }
 
