@@ -20,7 +20,6 @@ services:
       - php
 
 
-#without php, composer is nothing
   php:
     build:
       context: ./docker
